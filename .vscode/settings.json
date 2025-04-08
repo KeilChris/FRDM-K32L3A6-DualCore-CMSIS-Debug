@@ -1,0 +1,5 @@
+{
+    "clangd.arguments": [
+        "--compile-commands-dir=/Users/chrsei01/02_Git/KeilChris/FRDM-K32L3A6-DualCore-CMSIS-Debug/out/HelloWorld_cm0plus/FRDM-K32L3A6/Debug"
+    ]
+}

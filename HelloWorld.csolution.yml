@@ -1,0 +1,43 @@
+solution:
+  created-for: CMSIS-Toolbox@2.6.0
+  cdefault:
+
+  # List of tested compilers that can be selected
+  select-compiler:
+    - compiler: AC6
+
+  compiler: AC6
+  
+  packs:
+    - pack: ARM::CMSIS@^6.1.0
+    - pack: ARM::CMSIS-RTX@^5.9.0
+    - pack: ARM::CMSIS-Compiler@^2.1.0
+    - pack: NXP::K32L3A60_DFP@^19.0.0
+    - pack: NXP::FRDM-K32L3A6_BSP@^19.0.0
+
+  target-types:
+    - type: FRDM-K32L3A6
+      board: FRDM-K32L3A6
+      device: K32L3A60VPJ1A
+
+  build-types:
+    - type: Debug
+      debug: on
+      optimize: debug
+
+    - type: Release
+      debug: off
+      optimize: balanced
+
+  misc:
+    - for-compiler: AC6
+      C-CPP:
+        - -gdwarf-5
+      ASM:
+        - -gdwarf-5
+      Link:
+        - --entry=Reset_Handler
+
+  projects:
+    - project: ./cm0plus/HelloWorld_cm0plus.cproject.yml
+    - project: ./cm4/HelloWorld_cm4.cproject.yml
