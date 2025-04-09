@@ -98,6 +98,10 @@ cbuild-run:
         size: 0x00000800
         default: true
         from-pack: NXP::K32L3A60_DFP@19.0.0
+      - name: SVD
+        access: p
+        start: 0x40000000
+        size: 0x0007ffff
   debugger:
     - name: <default>
       port: swd

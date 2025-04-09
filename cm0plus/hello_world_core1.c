@@ -50,6 +50,7 @@ void SystemInitHook(void)
 int main(void)
 {
     uint32_t startupData, i;
+    volatile int j = 0;
     mcmgr_status_t status;
 
     /* Define the init structure for the output LED pin*/
@@ -84,5 +85,6 @@ int main(void)
     {
         SDK_DelayAtLeastUs(500000U, SDK_DEVICE_MAXIMUM_CPU_CLOCK_FREQUENCY);
         LED_TOGGLE();
+        j++;
     }
 }

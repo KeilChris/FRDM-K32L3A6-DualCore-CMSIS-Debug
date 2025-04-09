@@ -23,7 +23,8 @@
             },
             "cmsis": {
                 "cbuildRunFile": "FRDM-K32L3A6.cbuild-run.yml"
-            }
+            },
+            "definitionPath": "/Users/chrsei01/.cache/arm/packs/NXP/K32L3A60_DFP/19.0.0/devices/K32L3A60/K32L3A60_cm4.xml"
         },
         {
             "name": "CM0+: pyOCD",
@@ -40,6 +41,7 @@
                 "server": "pyocd",
                 "port": "3334"
             },
+            "definitionPath": "/Users/chrsei01/.cache/arm/packs/NXP/K32L3A60_DFP/19.0.0/devices/K32L3A60/K32L3A60_cm0plus.xml"
         }
     ]
 }
